@@ -21,23 +21,20 @@ function Header() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#find-position',
-        endTrigger: '#find-position',
         start: '120px top',
+        onLeave: () => tl.reverse(),
         onEnterBack: () => tl.reverse(),
         onRefresh: () => tl.paused(),
-        onLeave: () => tl.reverse(),
       },
     });
 
     gsap.fromTo(
       '.header',
       { y: -200, opacity: 0 },
-      {
-        y: 0, opacity: 1, duration: 1, delay: 0.15,
-      },
+      { y: 0, opacity: 1, duration: 1, delay: 0.15 }
     );
     tl.to('.header', { y: '-=200', duration: 0.8, ease: 'power2.in' });
-  });
+  }, []);
 
   return (
     <StyledHeader className="header">
