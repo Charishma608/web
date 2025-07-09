@@ -1,6 +1,5 @@
 import React from 'react';
 import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Hamburger from '../../atoms/hamburger';
 import NavList from '../../molecules/nav-list';
 import Logo from '../../atoms/logo';
@@ -14,30 +13,42 @@ import {
 import LoginButton from '../../atoms/login-button';
 import FreeTrialButton from '../../atoms/free-trial-button';
 
-gsap.registerPlugin(ScrollTrigger);
-
 function Header() {
-  React.useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#find-position',
-        start: '120px top',
-        onLeave: () => tl.reverse(),
-        onEnterBack: () => tl.reverse(),
-        onRefresh: () => tl.paused(),
-      },
-    });
+  const headerRef = React.useRef<HTMLDivElement>(null);
+  const lastScrollY = React.useRef(0);
+  const [visible, setVisible] = React.useState(true);
 
-    gsap.fromTo(
-      '.header',
-      { y: -200, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 0.15 }
-    );
-    tl.to('.header', { y: '-=200', duration: 0.8, ease: 'power2.in' });
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down
+        setVisible(false);
+      } else {
+        // Scrolling up
+        setVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  React.useEffect(() => {
+    if (headerRef.current) {
+      if (visible) {
+        gsap.to(headerRef.current, { y: 0, duration: 0.3, ease: 'power2.out' });
+      } else {
+        gsap.to(headerRef.current, { y: -120, duration: 0.3, ease: 'power2.in' });
+      }
+    }
+  }, [visible]);
+
   return (
-    <StyledHeader className="header">
+    <StyledHeader ref={headerRef}>
       <StyledHeaderBlock>
         <StyledLogoBlock>
           <Logo />
