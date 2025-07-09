@@ -5,15 +5,15 @@ import Drawer from '../organisms/drawer';
 import Footer from '../footer';
 
 type LayoutProps = {
-    children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 function Layout({ children }: LayoutProps) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleDrawer = React.useCallback(() => {
-    setIsOpen(!isOpen);
-  }, [isOpen]);
+    setIsOpen((prev) => !prev);
+  }, []);
 
   const globalValue: GlobalType = React.useMemo<GlobalType>(() => ({
     drawerOpen: isOpen,
@@ -35,9 +35,10 @@ function Layout({ children }: LayoutProps) {
         <Drawer />
         <div style={{ flex: 1 }}>
           <main style={{ maxWidth: '1280px', margin: '0 auto', width: '100%' }}>
-          {children}
-        </main>
-        </div>        <Footer />
+            {children}
+          </main>
+        </div>
+        <Footer />
       </div>
     </GlobalContext.Provider>
   );
