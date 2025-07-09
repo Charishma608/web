@@ -9,7 +9,7 @@ export const StyledHeader = styled('header', ({ $theme }) => ({
   zIndex: 90,
   maxWidth: '1280px',
   width: '100%',
-  margin: '0px auto',
+  margin: '0 auto',
   display: 'block',
   backgroundColor: $theme.colors.mono100,
   [$theme.mediaQuery.small]: { padding: '20px 24px' },
@@ -24,24 +24,24 @@ export const StyledHeaderBlock = styled('div', () => ({
 }));
 
 export const StyledLogoBlock = styled('div', ({ $theme }) => ({
-  [$theme.mediaQuery.small]: { minWidth: 'auto' },
-  [$theme.mediaQuery.medium]: { minWidth: 'auto' },
   [$theme.mediaQuery.large]: { minWidth: '250px' },
 }));
 
 export const StyledNavBlock = styled('div', ({ $theme }) => ({
   justifyItems: 'flex-start',
   width: '100%',
-  [$theme.mediaQuery.small]: { display: 'none' },
-  [$theme.mediaQuery.medium]: { display: 'none' },
-  [$theme.mediaQuery.large]: { display: 'flex' },
+  display: 'none',
+  [$theme.mediaQuery.large]: {
+    display: 'flex',
+  },
 }));
 
 export const StyledActionsBlock = styled('div', ({ $theme }) => ({
   justifyContent: 'flex-end',
   alignItems: 'center',
   width: '100%',
-  [$theme.mediaQuery.small]: { display: 'none' },
-  [$theme.mediaQuery.medium]: { display: 'none' },
-  [$theme.mediaQuery.large]: { display: 'flex' },
+  display: 'none',
+  [$theme.mediaQuery.large]: {
+    display: 'flex',
+  },
 }));
