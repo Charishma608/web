@@ -12,7 +12,7 @@ function NavList() {
   const timeline = gsap.timeline();
 
   const updateNavLink = ({ url }: { url: string }) => {
-    timeline.addLabel(url).to(window, {
+    timeline.to(window, {
       duration: 1.6,
       ease: 'power3.out',
       scrollTo: { y: url, offsetY: 80 },
