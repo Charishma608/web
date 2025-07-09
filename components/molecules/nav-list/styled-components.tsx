@@ -1,38 +1,29 @@
 /* eslint-disable import/prefer-default-export */
 import { styled } from 'baseui';
 
-// ✅ Define the prop type
 type StyledNavLinkProps = {
   $isActive: boolean;
 };
 
 export const StyledNav = styled('nav', ({ $theme }) => ({
+  width: '100%',
   [$theme.mediaQuery.small]: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
     alignItems: 'stretch',
-    width: '100%',
   },
   [$theme.mediaQuery.medium]: {
-    paddingTop: 0,
     display: 'flex',
     flexDirection: 'column',
-    width: '100%',
-    justifyContent: 'space-between',
     alignItems: 'stretch',
   },
   [$theme.mediaQuery.large]: {
-    paddingTop: 0,
-    display: 'block',
+    display: 'flex',
     flexDirection: 'row',
-    width: '100%',
     justifyContent: 'flex-start',
-    alignItems: 'stretch',
   },
 }));
 
-// ✅ Apply the custom prop type
 export const StyledNavLink = styled<'a', StyledNavLinkProps>('a', ({ $theme, $isActive }) => ({
   color: $theme.colors.mono800,
   textDecoration: 'none',
@@ -40,39 +31,25 @@ export const StyledNavLink = styled<'a', StyledNavLinkProps>('a', ({ $theme, $is
   fontSize: '1rem',
   lineHeight: '22px',
   boxShadow: $isActive ? 'inset 0 -9px 0 0 #97c680' : 'inset 0 0 0 0 #97c680',
-  transitionProperty: 'box-shadow',
-  transitionDuration: $theme.animation.timing700,
-  ':hover': { boxShadow: 'inset 0 -9px 0 0 #97c680' },
+  transition: 'box-shadow 0.3s ease',
+  ':hover': {
+    boxShadow: 'inset 0 -9px 0 0 #97c680',
+  },
   [$theme.mediaQuery.small]: {
-    marginRight: 0,
-    textAlign: 'left',
-    marginBottom: '-1px',
-    paddingTop: '24px',
-    paddingBottom: '24px',
+    padding: '20px',
     borderBottom: '1px solid rgba(30,30,47,.1)',
     display: 'block',
     width: '100%',
-    ':last-child': { borderBottom: '1px solid rgba(30,30,47,.0)' },
   },
   [$theme.mediaQuery.medium]: {
-    marginRight: 0,
-    textAlign: 'left',
-    display: 'block',
-    marginBottom: '-1px',
-    paddingTop: '24px',
-    paddingBottom: '24px',
+    padding: '20px',
     borderBottom: '1px solid rgba(30,30,47,.1)',
+    display: 'block',
     width: '100%',
-    ':last-child': { borderBottom: '1px solid rgba(30,30,47,.0)' },
   },
   [$theme.mediaQuery.large]: {
     marginRight: '1.5rem',
-    textAlign: 'center',
     display: 'inline-block',
-    marginBottom: 0,
-    paddingTop: 0,
-    paddingBottom: 0,
     borderBottom: 'none',
-    width: 'auto',
   },
 }));
