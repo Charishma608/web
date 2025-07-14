@@ -118,38 +118,32 @@ const testimonials = [
   {
     id: 1,
     text: 'Partnering with SymplifyTech was the best decision we made for our digital transformation. Their team migrated our systems to the cloud with zero downtime and continued to provide exceptional support. Highly recommended!',
-    name: 'John M.',
-    role: 'CEO, MedTech Solutions',
+    name: ' Aman Haque',
+    role: 'Founder, GigStryk Entertainment Pvt. Ltd.',
     image: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
     id: 2,
     text: "Our veterinary management platform wouldn't have scaled without the solid backend infrastructure and DevOps expertise from SymplifyTech. Their responsiveness and deep technical knowledge set them apart.",
-    name: 'Samantha R.',
-    role: 'CTO, VetEase',
+    name: 'Nakulesh Ghosh',
+    role: 'CEO/Co-founder, Ternout Pvt. Ltd.',
     image: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
   {
     id: 3,
     text: "We needed custom software for our e-learning platform, and SymplifyTech delivered beyond expectations — secure, fast, and intuitive. They're more than consultants; they're true technology partners.",
-    name: 'Rajiv S.',
-    role: 'Founder, EduNext',
+    name: 'Santosh Nirala',
+    role: 'CEO, Vetease India Pvt. Ltd.',
     image: 'https://randomuser.me/api/portraits/men/45.jpg',
   },
   {
     id: 4,
     text: 'SymplifyTech helped modernize our legacy systems and implement robust data analytics pipelines. They listened, adapted, and delivered quality every step of the way.',
-    name: 'Lisa T.',
-    role: 'Product Manager, GreenFarm Tech',
+    name: 'Rantu Barman',
+    role: 'Mobile Developer, Fyers',
     image: 'https://randomuser.me/api/portraits/women/68.jpg',
   },
-  {
-    id: 5,
-    text: 'From IT strategy to cybersecurity audits, SymplifyTech is our go-to partner. Their attention to detail and proactive approach saved us from multiple compliance issues.',
-    name: 'Amar P.',
-    role: 'Director of IT, FinZen Global',
-    image: 'https://randomuser.me/api/portraits/men/65.jpg',
-  },
+ 
 ];
 
 function CustomerSection() {
