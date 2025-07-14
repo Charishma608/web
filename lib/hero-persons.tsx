@@ -19,7 +19,7 @@ export const HERO_PERSONS: HeroPersonType[] = [
   {
     id: 1,
     title: 'Leverage Gen AI',
-    category: 'Writing',
+    category: 'Gen AI',
     imageUrl: '/hero_person-2.jpg',
     imageAlt: '',
     text: 'Agentic Workflows',
@@ -27,7 +27,7 @@ export const HERO_PERSONS: HeroPersonType[] = [
   {
     id: 2,
     title: 'Want a Remote Team?',
-    category: 'Business',
+    category: 'Remote Team',
     imageUrl: '/hero_person-3.jpg',
     imageAlt: '',
     text: 'Hire Talents',
