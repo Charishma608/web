@@ -11,10 +11,11 @@ export const StyledHeader = styled('header', ({ $theme }) => ({
   width: '100%',
   margin: '0 auto',
   display: 'block',
-  backgroundColor: $theme.colors.mono100,
-  [$theme.mediaQuery.small]: { padding: '20px 24px' },
-  [$theme.mediaQuery.medium]: { padding: '1.714rem 1.714rem' },
-  [$theme.mediaQuery.large]: { padding: '2.375rem 0px' },
+  backgroundColor: 'transparent',
+  background: 'none',
+  [$theme.mediaQuery.small]: { padding: '10px 16px' },
+  [$theme.mediaQuery.medium]: { padding: '12px 20px' },
+  [$theme.mediaQuery.large]: { padding: '15px 0' },
 }));
 
 export const StyledHeaderBlock = styled('div', () => ({
