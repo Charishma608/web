@@ -8,11 +8,24 @@ import { HeroPersonType } from '../../../lib/hero-persons';
 function HeroPersonCard(props: { index: number, person: HeroPersonType }) {
   const { index, person } = props;
   const [css, theme] = useStyletron();
+  const [isMobile, setIsMobile] = React.useState(false);
   const list = [0, 1, 2];
+
+  React.useEffect(() => {
+    // Check if mobile on component mount and window resize
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   const targets = list.filter((n) => n !== index);
 
-  const onMouseEnter = () => {
+  // Only apply hover effects on desktop
+  const onMouseEnter = isMobile ? undefined : () => {
     gsap.to(`.person${index}`, { width: '58%' });
     gsap.to([`.person${targets[0]}`, `.person${targets[1]}`], { width: '21%' });
     gsap.to(`#titleDiv${index}`, { opacity: 1, duration: 0.6 });
@@ -20,7 +33,7 @@ function HeroPersonCard(props: { index: number, person: HeroPersonType }) {
     gsap.to(`#box${index}`, { x: -100, opacity: 0, duration: 0.5 });
   };
 
-  const onMouseLeave = () => {
+  const onMouseLeave = isMobile ? undefined : () => {
     gsap.to('.person0', { width: '58%' });
     gsap.to(['.person1', '.person2'], { width: '21%' });
     gsap.to('#titleDiv0', { opacity: 1, duration: 0.6 });
@@ -31,7 +44,10 @@ function HeroPersonCard(props: { index: number, person: HeroPersonType }) {
   return (
     <HeroPerson
       className={`person${index}`}
-      style={{ width: index === 0 ? '58%' : '21%' }}
+      style={{
+        width: isMobile ? '280px' : (index === 0 ? '58%' : '21%'),
+        flexShrink: isMobile ? 0 : 'auto'
+      }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
