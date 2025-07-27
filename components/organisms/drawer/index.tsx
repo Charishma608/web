@@ -47,17 +47,36 @@ function Drawer() {
       <NavList />
       <div className={css({
         display: 'flex',
+        flexDirection: 'column',
         width: '100%',
         paddingTop: '24px',
         borderTop: '1px solid rgba(30,30,47,.1)',
-        alignItems: 'center',
-        [theme.mediaQuery.small]: { justifyContent: 'space-between' },
-        [theme.mediaQuery.medium]: { justifyContent: 'flex-start' },
-        [theme.mediaQuery.large]: { justifyContent: 'flex-start' },
+        alignItems: 'stretch',
+        gap: '16px',
+        [theme.mediaQuery.medium]: { 
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+        },
+        [theme.mediaQuery.large]: { 
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+        },
       })}
       >
-        <LoginButton />
-        <FreeTrialButton />
+        <div className={css({ 
+          display: 'none',
+          [theme.mediaQuery.medium]: { 
+            display: 'block',
+            width: 'auto' 
+          } 
+        })}>
+          <LoginButton />
+        </div>
+        <div className={css({ width: '100%', [theme.mediaQuery.medium]: { width: 'auto' } })}>
+          <FreeTrialButton />
+        </div>
       </div>
     </BaseDrawer>
   );
