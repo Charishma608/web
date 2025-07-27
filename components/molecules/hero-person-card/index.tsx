@@ -78,10 +78,23 @@ function HeroPersonCard(props: { index: number, person: HeroPersonType }) {
               width: '100%',
               display: 'flex',
               alignItems: 'flex-end',
-              justifyContent: 'space-between',
-              [theme.mediaQuery.small]: { paddingBottom: '40px', paddingLeft: index === 0 ? '90px' : '40px' },
-              [theme.mediaQuery.medium]: { paddingBottom: '75px', paddingLeft: index === 0 ? '90px' : '40px' },
-              [theme.mediaQuery.large]: { paddingBottom: '75px', paddingLeft: index === 0 ? '90px' : '40px' },
+              [theme.mediaQuery.small]: { 
+                paddingBottom: '40px', 
+                paddingLeft: '24px',
+                paddingRight: '24px',
+                justifyContent: 'flex-start',
+                textAlign: 'left',
+              },
+              [theme.mediaQuery.medium]: { 
+                paddingBottom: '75px', 
+                paddingLeft: index === 0 ? '90px' : '40px',
+                justifyContent: 'space-between',
+              },
+              [theme.mediaQuery.large]: { 
+                paddingBottom: '75px', 
+                paddingLeft: index === 0 ? '90px' : '40px',
+                justifyContent: 'space-between',
+              },
             })}
           >
             <h1 className={css({
