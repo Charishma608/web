@@ -19,6 +19,11 @@ function Drawer() {
       size={SIZE.full}
       overrides={{
         Root: { style: () => ({ zIndex: 80 }) },
+        Close: {
+          style: {
+            display: 'none',
+          },
+        },
         DrawerBody: {
           style: ({
             marginTop: 0,
