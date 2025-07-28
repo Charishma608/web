@@ -108,7 +108,7 @@ function CategoryCard({ category, index }: { category: CategoryType, index: numb
 
       {isModalOpen && (
         <ModalOverlay onClick={closeModal}>
-          <ModalContent onClick={(e) => e.stopPropagation()}>
+          <ModalContent onClick={(e: React.MouseEvent) => e.stopPropagation()}>
             <CloseButton onClick={closeModal}>&times;</CloseButton>
             <ModalImage 
               src={`/${category.imageUrl}`} 
