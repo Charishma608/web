@@ -73,15 +73,16 @@ function FindPositionSection() {
               overrides={{
                 BaseButton: {
                   style: {
-                    backgroundColor: '#00C29F',
+                    backgroundColor: '#8BF1FC',
                     minWidth: '280px',
                     width: '100%',
                     maxWidth: '320px',
+                    color: '#000000',
                     ':hover': {
-                      backgroundColor: '#00A98E',
+                      backgroundColor: '#7be1ec',
                     },
                     ':active': {
-                      backgroundColor: '#00917A',
+                      backgroundColor: '#6bd1dc',
                     },
                   },
                 },
@@ -118,15 +119,16 @@ function FindPositionSection() {
                 overrides={{
                   BaseButton: {
                     style: {
-                      backgroundColor: '#00C29F',
+                      backgroundColor: '#3a4bec',
                       minWidth: '280px',
                       width: '100%',
                       maxWidth: '320px',
+                      color: '#ffffff',
                       ':hover': {
-                        backgroundColor: '#00A98E',
+                        backgroundColor: '#2a3bdc',
                       },
                       ':active': {
-                        backgroundColor: '#00917A',
+                        backgroundColor: '#1a2bcc',
                       },
                     },
                   },
