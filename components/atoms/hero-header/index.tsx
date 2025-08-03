@@ -5,7 +5,7 @@ function HeroHeader() {
   const [css, theme] = useStyletron();
   const dotStyle = { 
     fontFamily: '"Arial", sans-serif',
-    color: '#00C29F' 
+    color: '#8BF1FC' 
   };
   
   return (
