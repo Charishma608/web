@@ -45,7 +45,7 @@ const BlogsSection = () => {
             <div className={css({
               fontSize: '48px',
               marginBottom: '16px',
-              color: '#97c680'
+              color: '#3a4bec'
             })}>
               Coming Soon
             </div>
