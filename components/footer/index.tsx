@@ -140,15 +140,15 @@ const Footer = () => {
             src="/logo .png" 
             alt="Logo"
             className={css({
-              height: '70px',
-              width: '90px',
+              height: '80px',
+              width: '100px',
             })}
           />
           <span className={css({
             display: 'inline-block',
             width: '6px',
             height: '6px',
-            backgroundColor: '#10B981',
+            backgroundColor: '#020f12ff',
             marginLeft: '4px',
             borderRadius: '50%',
           })} />
@@ -200,10 +200,10 @@ const Footer = () => {
               overrides={{
                 BaseButton: {
                   style: {
-                    backgroundColor: '#10B981',
+                    backgroundColor: '#3a4bec',
                     color: 'white',
                     ':hover': {
-                      backgroundColor: '#059669',
+                      backgroundColor: '#2b3bb5',
                     },
                     whiteSpace: 'nowrap',
                     paddingLeft: '16px',
