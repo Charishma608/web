@@ -13,6 +13,11 @@ gsap.registerPlugin(ScrollTrigger);
 function CategoriesSection() {
   const [css, theme] = useStyletron();
 
+
+
+
+
+
   return (
     <Section
       id="categories"
@@ -50,7 +55,7 @@ function CategoriesSection() {
           })}
         >
           Our Services
-          <span style={{ color: '#97c680' }}>.</span>
+          <span style={{ color: '#8BF1FC' }}>.</span>
         </h2>
       </div>
 
