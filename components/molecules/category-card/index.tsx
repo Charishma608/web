@@ -71,7 +71,7 @@ function CategoryCard({ category, index }: { category: CategoryType, index: numb
   const detail = serviceDetails[category.id as keyof typeof serviceDetails];
 
   const onMouseEnter = (e: any) => {
-    gsap.to(e.currentTarget, { color: '#97c680' });
+    gsap.to(e.currentTarget, { color: '#3a4bec' });
     gsap.to(`.category-flex${index}-arrow`, { y: 0 });
   };
 
