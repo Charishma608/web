@@ -51,7 +51,7 @@ const Home: NextPage = function () {
                 display: 'inline-block',
                 width: '8px',
                 height: '8px',
-                backgroundColor: '#97c680',
+                backgroundColor: '#8BF1FC',
                 marginLeft: '8px',
                 verticalAlign: 'middle',
               }}
@@ -93,7 +93,7 @@ const Home: NextPage = function () {
       bottom: '10px',
       width: '1px',
       background:
-        'repeating-linear-gradient(to bottom, #97c680, #97c680 3px, transparent 3px, transparent 6px)',
+        'repeating-linear-gradient(to bottom, #3a4bec, #3a4bec 3px, transparent 3px, transparent 6px)',
       zIndex: 1,
     }}
   ></div>
@@ -156,12 +156,12 @@ const Home: NextPage = function () {
           width: '40px',
           height: '40px',
           borderRadius: '50%',
-          border: '1px solid #97c680',
+          border: '1px solid #3a4bec',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexShrink: 0,
-          color: '#97c680',
+          color: '#3a4bec',
           padding: '8px',
           backgroundColor: 'white',
           zIndex: 2,
@@ -208,13 +208,13 @@ const Home: NextPage = function () {
               }}
             >
               <div>
-                <div style={{ fontSize: '28px', fontWeight: 700, color: '#97c680' }}>5+</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#3a4bec' }}>5+</div>
                 <div style={{ fontSize: '13px', color: '#777', marginTop: '4px' }}>
                   Successful Projects Delivered
                 </div>
               </div>
               <div>
-                <div style={{ fontSize: '28px', fontWeight: 700, color: '#97c680' }}>100%</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#3a4bec' }}>100%</div>
                 <div style={{ fontSize: '13px', color: '#777', marginTop: '4px' }}>
                   Satisfied Clients across industries
                 </div>
