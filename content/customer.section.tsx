@@ -101,7 +101,7 @@ const CustomerName = styled('div', {
 });
 
 const CustomerRole = styled('div', {
-  color: '#10B981',
+  color: '#3a4bec',
   fontSize: '14px',
 });
 
