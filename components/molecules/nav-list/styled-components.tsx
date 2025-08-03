@@ -30,10 +30,10 @@ export const StyledNavLink = styled<'a', StyledNavLinkProps>('a', ({ $theme, $is
   cursor: 'pointer',
   fontSize: '1rem',
   lineHeight: '22px',
-  boxShadow: $isActive ? 'inset 0 -9px 0 0 #97c680' : 'inset 0 0 0 0 #97c680',
+  boxShadow: $isActive ? 'inset 0 -9px 0 0 #555555' : 'inset 0 0 0 0 #555555',
   transition: 'box-shadow 0.3s ease',
   ':hover': {
-    boxShadow: 'inset 0 -9px 0 0 #97c680',
+    boxShadow: 'inset 0 -9px 0 0 #555555',
   },
   [$theme.mediaQuery.small]: {
     padding: '20px',
